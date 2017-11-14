@@ -7,6 +7,9 @@ router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'barangs', views.BarangViewSet)
 router.register(r'gudangs', views.GudangViewSet)
+router.register(r'pegawais', views.PegawaiViewSet)
+router.register(r'pengirimans', views.PengirimanViewSet)
+router.register(r'transaksis', views.TransaksiViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

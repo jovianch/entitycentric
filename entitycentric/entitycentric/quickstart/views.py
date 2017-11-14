@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
-from .models import Barang, Gudang
+from .models import Barang, Gudang, Pegawai, Pengiriman, Transaksi
 from rest_framework import viewsets
-from entitycentric.quickstart.serializers import UserSerializer, GroupSerializer, BarangSerializer, GudangSerializer
+from entitycentric.quickstart.serializers import UserSerializer, GroupSerializer, BarangSerializer, GudangSerializer, PegawaiSerializer, PengirimanSerializer, TransaksiSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -32,3 +32,15 @@ class GudangViewSet(viewsets.ModelViewSet):
     """
     queryset = Gudang.objects.all()
     serializer_class = GudangSerializer
+
+class PegawaiViewSet(viewsets.ModelViewSet):
+    queryset = Pegawai.objects.all()
+    serializer_class = PegawaiSerializer
+
+class PengirimanViewSet(viewsets.ModelViewSet):
+    queryset = Pengiriman.objects.all()
+    serializer_class = PengirimanSerializer
+
+class TransaksiViewSet(viewsets.ModelViewSet):
+    queryset = Transaksi.objects.all()
+    serializer_class = TransaksiSerializer

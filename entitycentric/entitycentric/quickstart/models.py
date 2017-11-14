@@ -13,3 +13,20 @@ class Gudang(models.Model):
     id_barang = models.CharField(max_length=50)
     tanggal_masuk = models.DateField()
     tanggal_keluar = models.DateField()
+
+class Pegawai(models.Model):
+    nama = models.CharField(max_length=70)
+    alamat = models.CharField(max_length=100)
+    telepon = models.CharField(max_length=20)
+
+class Pengiriman(models.Model):
+    id_pegawai = models.CharField(max_length=50)
+    id_barang = models.CharField(max_length=50)
+    tujuan = models.CharField(max_length=100)
+    id_gudang = models.CharField(max_length=50)
+
+class Transaksi(models.Model):
+    tanggal = models.DateField()
+    biaya = models.IntegerField()
+    id_pegawai = models.CharField(max_length=50)
+    id_barang = models.CharField(max_length=50)
